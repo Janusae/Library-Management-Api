@@ -1,0 +1,179 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|solutionrelative:domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\library management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 24,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:151:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Domain\\Sql\\Entity\\User\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Sql\\Entity\\User\\User.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Domain\\Sql\\Entity\\User\\User.cs",
+              "RelativeToolTip": "Domain\\Sql\\Entity\\User\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T07:56:04.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Application\\Services\\Login.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Login.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Application\\Services\\Login.cs",
+              "RelativeToolTip": "Application\\Services\\Login.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAtwBoAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T07:55:48.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Library Management\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Library Management\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDkAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T06:51:44.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Program.cs",
+              "RelativeDocumentMoniker": "Library Management\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Program.cs",
+              "RelativeToolTip": "Library Management\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T06:48:58.622Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

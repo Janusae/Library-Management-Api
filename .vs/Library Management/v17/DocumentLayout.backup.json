@@ -1,22 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\",
+  "WorkspaceRootPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|solutionrelative:domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\hp\\desktop\\vs projects\\library management\\library management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\command\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\command\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\query\\getallusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\query\\getallusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\command\\editusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\command\\editusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\query\\getuserbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\query\\getuserbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FE3457-24D8-47E8-BDFD-EE299845A4A1}|Domain\\Domain.csproj|solutionrelative:domain\\sql\\entity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Migrations\\20250813070036_initialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20250813070036_initialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\library management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,150 +46,135 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:145:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:151:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:146:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:147:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:150:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DeleteUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\DeleteUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Command\\DeleteUserCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\DeleteUserCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Command\\DeleteUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:30:59.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:19:53.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetUserByIdCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Query\\GetUserByIdCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Query\\GetUserByIdCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Query\\GetUserByIdCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Query\\GetUserByIdCommand.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T07:03:45.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250813070036_initialDb.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Migrations\\20250813070036_initialDb.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250813070036_initialDb.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Migrations\\20250813070036_initialDb.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20250813070036_initialDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T07:00:36.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAllUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Query\\GetAllUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Query\\GetAllUserCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Query\\GetAllUserCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Query\\GetAllUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T06:55:01.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Domain\\Sql\\Entity\\User\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Sql\\Entity\\User\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Sql\\Entity\\User\\User.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Domain\\Sql\\Entity\\User\\User.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Sql\\Entity\\User\\User.cs",
               "RelativeToolTip": "Domain\\Sql\\Entity\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T07:56:04.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Application\\Services\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Services\\Login.cs",
               "RelativeDocumentMoniker": "Application\\Services\\Login.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Application\\Services\\Login.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Services\\Login.cs",
               "RelativeToolTip": "Application\\Services\\Login.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAtwBoAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAlwCAAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T07:55:48.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-02T07:55:48.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Library Management\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Library Management\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDkAAABOAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Library Management\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAC4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T06:51:44.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Program.cs",
               "RelativeDocumentMoniker": "Library Management\\Program.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\VS Projects\\Library Management\\Library Management\\Program.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Program.cs",
               "RelativeToolTip": "Library Management\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T06:48:58.622Z"
+              "WhenOpened": "2025-08-02T06:48:58.622Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,3 +9,15 @@ C:\Users\HP\Desktop\VS Projects\Library Management\Domain\obj\Debug\net9.0\Domai
 C:\Users\HP\Desktop\VS Projects\Library Management\Domain\obj\Debug\net9.0\refint\Domain.dll
 C:\Users\HP\Desktop\VS Projects\Library Management\Domain\obj\Debug\net9.0\Domain.pdb
 C:\Users\HP\Desktop\VS Projects\Library Management\Domain\obj\Debug\net9.0\ref\Domain.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\bin\Debug\net9.0\Domain.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Domain\obj\Debug\net9.0\ref\Domain.dll

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Domain.Sql.Entity;
+using Domain.Sql.Entity.Book;
 
 namespace Infrastructure.Context
 {
@@ -10,5 +11,6 @@ namespace Infrastructure.Context
             
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Book> Book { get; set; }
     }
 }

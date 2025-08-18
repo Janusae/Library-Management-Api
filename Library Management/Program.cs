@@ -1,4 +1,5 @@
 using Application.CQRS.User;
+using Application.Services;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ internal class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddControllers();
         builder.Services.AddOpenApi();
+        builder.Services.AddScoped<IPasswordManagement, Password_Management>();
         builder.Services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly);

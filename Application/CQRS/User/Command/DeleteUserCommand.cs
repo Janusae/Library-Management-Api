@@ -1,5 +1,8 @@
-﻿using Infrastructure.Context;
+﻿using Application.Exceptions;
+using Infrastructure.Context;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Application.CQRS.User
 {
@@ -20,14 +23,23 @@ namespace Application.CQRS.User
         {
             try
             {
-                var user = _dbcontext.Users.FirstOrDefault(x => x.Id == Guid.Parse(request.Id));
-                _dbcontext.Users.Remove(user);
-                await _dbcontext.SaveChangesAsync();
-                return "Successfull";
+                if (string.IsNullOrWhiteSpace(request.Id) || !int.TryParse(request.Id, out int id))
+                {
+                    return "Your id is invalid!";
+                }
+
+                var user = await _dbcontext.Users.Where(x => x.Id == Guid.Parse(request.Id)).FirstOrDefaultAsync();
+                _dbcontext.Users.Remove(user );
+                await _dbcontext.SaveChangesAsync(cancellationToken);
+                return "Removing user is successfull!";
+            }
+            catch(DbUpdateException ex)
+            {
+                throw new AppException("خطای دیتابیس در حذف کاربر");
             }
             catch (Exception ex)
             {
-                return "Failed";
+                throw new AppException("حذف کاربر ناموفق بود");
             }
 
         }

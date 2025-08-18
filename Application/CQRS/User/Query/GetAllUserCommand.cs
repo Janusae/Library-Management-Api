@@ -1,4 +1,5 @@
-﻿using Infrastructure.Context;
+﻿using Application.Exceptions;
+using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,12 +20,20 @@ namespace Application.CQRS.User
 
         public async Task<List<Domain.Sql.Entity.User>> Handle(GetAllUserCommand request, CancellationToken cancellationToken)
         {
-            var users = await _dbcontext.Users
+            try
+            {
+                var users = await _dbcontext.Users
                 .AsNoTracking()
                 .Where(x => x.IsDeleted != true)
                 .ToListAsync(cancellationToken);
 
-            return users;
+                return users;
+            }
+            catch(Exception ex)
+            {
+                throw new AppException("فراخوانی کاربران ناموفق بود" , "500");
+            }
+            
         }
     }
 }

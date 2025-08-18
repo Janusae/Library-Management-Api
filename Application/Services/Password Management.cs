@@ -2,14 +2,14 @@
 
 namespace Application.Services
 {
-    public class Password_Management
+    public class Password_Management : IPasswordManagement
     {
         private readonly PasswordHasher<object> _hasher = new();
-        public string HashPassword(string text)
+        public string HashPassword(string password)
         {
-            if (string.IsNullOrWhiteSpace(text))
-                throw new ArgumentException("Password cannot be empty or whitespace.", nameof(text));
-            return _hasher.HashPassword(null , text);
+            if (string.IsNullOrWhiteSpace(password))
+                throw new ArgumentException("Password cannot be empty or whitespace.", nameof(password));
+            return _hasher.HashPassword(null , password);
 
         }
     }

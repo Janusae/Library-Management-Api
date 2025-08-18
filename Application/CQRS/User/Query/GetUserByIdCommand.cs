@@ -1,4 +1,5 @@
-﻿using Infrastructure.Context;
+﻿using Application.Exceptions;
+using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,8 +20,16 @@ namespace Application.CQRS.User
 
         public async Task<Domain.Sql.Entity.User> Handle(GetUserByIdCommand request, CancellationToken cancellationToken)
         {
-            var user = await _dbcontext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == Guid.Parse(request.Id));
-            return user;
+            try
+            {
+                var user = await _dbcontext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == Guid.Parse(request.Id));
+                return user;
+            }
+            catch(Exception ex)
+            {
+                throw new AppException("فراخوانی کاربر ناموفق بود" , "500");
+            }
+            
         }
     }
 }

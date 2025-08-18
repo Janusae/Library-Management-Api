@@ -1,4 +1,5 @@
 ﻿using Application.DTO;
+using Application.Exceptions;
 using Application.Services;
 using Infrastructure.Context;
 using MediatR;
@@ -13,10 +14,11 @@ namespace Application.CQRS.User
     public class EditUserCommandHandler : IRequestHandler<EditUserCommand, string>
     {
         private readonly ProgramDbContext _dbContext;
-
-        public EditUserCommandHandler(ProgramDbContext programDbContext)
+        private readonly IPasswordManagement _passwordManagement;
+        public EditUserCommandHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement)
         {
             _dbContext = programDbContext;
+            _passwordManagement = passwordManagement;
         }
 
         public async Task<string> Handle(EditUserCommand request, CancellationToken cancellationToken)
@@ -24,19 +26,41 @@ namespace Application.CQRS.User
             try
             {
                 var data = request.editUser;
-                var passHash = new Password_Management();
+                if(string.IsNullOrWhiteSpace(data.Id) || !int.TryParse(data.Id , out int id))
+                {
+                    return "Your id is invalid!";
+                }
+                if (string.IsNullOrWhiteSpace(data.Username))
+                {
+                    return "Username can not be null!";
+                }
+                if (string.IsNullOrWhiteSpace(data.Password))
+                {
+                    return "Password can not be null!";
+                }
+
+                var repeatableUsername = _dbContext.Users.Any(x => x.Username == request.editUser.Username);
+                if (repeatableUsername)
+                {
+                    return "Username is used by anther person!";
+                }
+
                 var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(data.Id));
                 if (user is null)
                     throw new Exception("We could not find any user!");
 
                 user.Username = data.Username;
-                user.PasswordHash = passHash.HashPassword(data.Password);
+                user.PasswordHash = _passwordManagement.HashPassword(data.Password);
                 await _dbContext.SaveChangesAsync();
                 return "Edit is successfull!";
             }
+            catch(DbUpdateException ex)
+            {
+                throw new AppException("خطای دیتابیس در ادیت کاربر" , "500");
+            }
             catch (Exception ex)
             {
-                return "Edit is Faild!";
+                throw new AppException("ادیت کاربر ناموفق بود" , "500");
             }
 
         }

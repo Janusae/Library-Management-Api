@@ -2,6 +2,8 @@
 using Infrastructure.Context;
 using MediatR;
 using Application.Services;
+using Microsoft.EntityFrameworkCore;
+using Application.Exceptions;
 namespace Application.CQRS.User
 {
     public class CreateUserCommand : IRequest<string>
@@ -11,10 +13,11 @@ namespace Application.CQRS.User
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, string>
     {
         private readonly ProgramDbContext _dbContext;
-
-        public CreateUserHandler(ProgramDbContext programDbContext)
+        private readonly IPasswordManagement _passwordManagement;
+        public CreateUserHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement)
         {
             _dbContext = programDbContext;
+            _passwordManagement = passwordManagement;
         }
 
         public async Task<string> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -22,7 +25,23 @@ namespace Application.CQRS.User
             try
             {
                 var data = request.createUser;
-                var passHash = new Password_Management();
+                if(string.IsNullOrWhiteSpace(data.Email))
+                {
+                    return "Email can not be null!";
+                }
+                if (string.IsNullOrWhiteSpace(data.Username))
+                {
+                    return "Username can not be null!";
+                }
+                if (string.IsNullOrWhiteSpace(data.Password))
+                {
+                    return "Password can not be null!";
+                }
+                if (string.IsNullOrWhiteSpace(data.Firstname))
+                {
+                    return "Firstname can not be null!";
+                }
+
                 var user = new Domain.Sql.Entity.User
                 {
                     CreatedAt = DateTime.Now,
@@ -30,15 +49,19 @@ namespace Application.CQRS.User
                     FirstName = data.Firstname,
                     LastName = data.Lastname,
                     Username = data.Username,
-                    PasswordHash = passHash.HashPassword(data.Password)
+                    PasswordHash = _passwordManagement.HashPassword(data.Password)
                 };
-                await _dbContext.Users.AddAsync(user);
-                await _dbContext.SaveChangesAsync();
-                return "Success";
+                await _dbContext.Users.AddAsync(user , cancellationToken);
+                await _dbContext.SaveChangesAsync(cancellationToken);
+                return "Creating user is successfull!";
             }
-            catch(Exception ex)
+            catch(DbUpdateException ex)
             {
-                return "Faild";
+                throw new AppException("خطای دیتابیس در ذخیره کاربر", "500");
+            }            catch(Exception ex)
+
+            {
+                throw new AppException("ایجاد کاربر ناموفق بود" , "500");
             }
             
         }

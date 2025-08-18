@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\library management\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\book\\query\\getbookscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\book\\query\\getbookscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\book\\query\\getbookbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\book\\query\\getbookbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,45 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetBookByIdCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "RelativeToolTip": "Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:03:14.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetBooksCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "RelativeToolTip": "Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T12:50:43.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Library Management\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Library Management\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T11:11:13.154Z",
-              "EditorCaption": ""
             }
           ]
         }

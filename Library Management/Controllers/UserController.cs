@@ -36,7 +36,7 @@ namespace Library_Management.Controllers
         public async Task<IActionResult> CraeteUser([FromBody] CreateUserCommand request, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(request, cancellationToken);
-            return Ok(request);
+            return Ok(result);
         }
         [HttpDelete("Delete")]
         public async Task<IActionResult> Delete(DeleteUserCommand requst, CancellationToken cancellationToken)

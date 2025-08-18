@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\library management\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\command\\editusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\command\\editusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\book\\query\\getbookscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\book\\query\\getbookscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\user\\command\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\user\\command\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\application\\cqrs\\book\\query\\getbookbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{140A366B-5456-4DD6-BB14-B720FF9A2EE0}|Application\\Application.csproj|solutionrelative:application\\cqrs\\book\\query\\getbookbyidcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|c:\\users\\mohammad\\desktop\\new folder (2)\\library-management-api\\library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42B38E8E-3DB8-46AB-93FA-AE76D37F379C}|Library Management\\Library Management.csproj|solutionrelative:library management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetBookByIdCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "RelativeToolTip": "Application\\CQRS\\Book\\Query\\GetBookByIdCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EditUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Command\\EditUserCommand.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:03:14.662Z",
+              "WhenOpened": "2025-08-18T08:04:36.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Library Management\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Library Management\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T08:05:35.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetBooksCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "RelativeToolTip": "Application\\CQRS\\Book\\Query\\GetBooksCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAIAAAAAAAAAA==",
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\CQRS\\User\\Command\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\CQRS\\User\\Command\\CreateUserCommand.cs",
+              "RelativeToolTip": "Application\\CQRS\\User\\Command\\CreateUserCommand.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvxsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T12:50:43.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Library Management\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Library Management\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T11:11:13.154Z",
+              "WhenOpened": "2025-08-18T08:02:46.476Z",
               "EditorCaption": ""
             }
           ]

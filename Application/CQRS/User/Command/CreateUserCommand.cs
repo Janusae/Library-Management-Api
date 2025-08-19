@@ -4,6 +4,7 @@ using MediatR;
 using Application.Services;
 using Microsoft.EntityFrameworkCore;
 using Application.Exceptions;
+using Application.Validations;
 namespace Application.CQRS.User
 {
     public class CreateUserCommand : IRequest<string>
@@ -24,24 +25,12 @@ namespace Application.CQRS.User
         {
             try
             {
-                var data = request.createUser;
-                if(string.IsNullOrWhiteSpace(data.Email))
-                {
-                    return "Email can not be null!";
-                }
-                if (string.IsNullOrWhiteSpace(data.Username))
-                {
-                    return "Username can not be null!";
-                }
-                if (string.IsNullOrWhiteSpace(data.Password))
-                {
-                    return "Password can not be null!";
-                }
-                if (string.IsNullOrWhiteSpace(data.Firstname))
-                {
-                    return "Firstname can not be null!";
-                }
+                var validator = new CreateUserDtoValidator();
+                var validationResult = validator.Validate(request.createUser);
+                if (!validationResult.IsValid)
+                    return $"{validationResult.Errors[0]}";
 
+                var data = request.createUser;
                 var user = new Domain.Sql.Entity.User
                 {
                     CreatedAt = DateTime.Now,

@@ -2,7 +2,7 @@
 {
     public class User
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public int Id { get; set; } 
 
         public string Username { get; set; } = string.Empty;
 

@@ -1,6 +1,7 @@
 ﻿using Application.DTO;
 using Application.Exceptions;
 using Application.Services;
+using Application.Validations;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -25,27 +26,19 @@ namespace Application.CQRS.User
         {
             try
             {
-                var data = request.editUser;
-                if(string.IsNullOrWhiteSpace(data.Id) || !int.TryParse(data.Id , out int id))
-                {
-                    return "Your id is invalid!";
-                }
-                if (string.IsNullOrWhiteSpace(data.Username))
-                {
-                    return "Username can not be null!";
-                }
-                if (string.IsNullOrWhiteSpace(data.Password))
-                {
-                    return "Password can not be null!";
-                }
+                var validator = new EditUserDtoValidator();
+                var validationResult = validator.Validate(request.editUser);
+                if (!validationResult.IsValid)
+                    return $"{validationResult.Errors[0]}";
 
+                var data = request.editUser;
                 var repeatableUsername = _dbContext.Users.Any(x => x.Username == request.editUser.Username);
                 if (repeatableUsername)
                 {
                     return "Username is used by anther person!";
                 }
 
-                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Guid.Parse(data.Id));
+                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Convert.ToInt32(data.Id));
                 if (user is null)
                     throw new Exception("We could not find any user!");
 

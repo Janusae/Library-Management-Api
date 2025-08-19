@@ -1,7 +1,10 @@
 using Application.CQRS.User;
 using Application.Services;
 using Infrastructure.Context;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation;
+
 
 internal class Program
 {
@@ -17,7 +20,6 @@ internal class Program
         {
             cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly);
         });
-
         builder.Services.AddDbContext<ProgramDbContext>(options =>
         {
             options.UseSqlServer("server=.;database=LibraryManagement;TrustServerCertificate=true;Trusted_Connection=true");

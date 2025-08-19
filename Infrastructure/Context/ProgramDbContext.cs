@@ -10,6 +10,15 @@ namespace Infrastructure.Context
         {
             
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(e => e.Id); 
+                entity.Property(e => e.Id)
+                      .ValueGeneratedOnAdd(); 
+            });
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Book> Book { get; set; }
     }

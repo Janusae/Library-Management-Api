@@ -1,4 +1,5 @@
 ﻿using Application.CQRS.User;
+using Application.Validations;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

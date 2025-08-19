@@ -2,7 +2,6 @@
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Application.CQRS.User
 {
@@ -23,12 +22,12 @@ namespace Application.CQRS.User
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(request.Id) || !int.TryParse(request.Id, out int id))
+                if (string.IsNullOrWhiteSpace(request.Id))
                 {
                     return "Your id is invalid!";
                 }
 
-                var user = await _dbcontext.Users.Where(x => x.Id == Guid.Parse(request.Id)).FirstOrDefaultAsync();
+                var user = await _dbcontext.Users.Where(x => x.Id == Convert.ToInt32(request.Id)).FirstOrDefaultAsync();
                 _dbcontext.Users.Remove(user );
                 await _dbcontext.SaveChangesAsync(cancellationToken);
                 return "Removing user is successfull!";

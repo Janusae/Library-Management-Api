@@ -358,3 +358,6 @@ C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Manageme
 C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\obj\Debug\net9.0\Library Management.pdb
 C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\obj\Debug\net9.0\Library Management.genruntimeconfig.cache
 C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\obj\Debug\net9.0\ref\Library Management.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\Mohammad\Desktop\New folder (2)\Library-Management-Api\Library Management\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

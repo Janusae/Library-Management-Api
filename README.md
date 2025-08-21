@@ -1,7 +1,7 @@
 # Library Management
 
 This project is built with **.NET** following **Clean Architecture** principles.  
-It demonstrates modern backend practices such as **Dependency Injection (DI)**, **CQRS with MediatR**, **Entity Framework Core**, and **Swagger API documentation**.
+It demonstrates modern backend practices such as **Dependency Injection (DI)**, **CQRS with MediatR**, **Entity Framework Core**, and **Swagger API documentation** and **FluentValidation**.
 
 ---
 

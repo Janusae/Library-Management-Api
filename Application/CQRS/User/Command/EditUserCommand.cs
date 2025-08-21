@@ -14,8 +14,9 @@ namespace Application.CQRS.User
     }
     public class EditUserCommandHandler : IRequestHandler<EditUserCommand, string>
     {
-        private readonly ProgramDbContext _dbContext;
+        private static ProgramDbContext _dbContext;
         private readonly IPasswordManagement _passwordManagement;
+        private static SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
         public EditUserCommandHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement)
         {
             _dbContext = programDbContext;
@@ -24,6 +25,7 @@ namespace Application.CQRS.User
 
         public async Task<string> Handle(EditUserCommand request, CancellationToken cancellationToken)
         {
+            await _semaphore.WaitAsync(cancellationToken);
             try
             {
                 var validator = new EditUserDtoValidator();
@@ -32,15 +34,13 @@ namespace Application.CQRS.User
                     return $"{validationResult.Errors[0]}";
 
                 var data = request.editUser;
-                var repeatableUsername = _dbContext.Users.Any(x => x.Username == request.editUser.Username);
-                if (repeatableUsername)
-                {
-                    return "Username is used by anther person!";
-                }
-
-                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Convert.ToInt32(data.Id));
+                if (CheckDouplicate(data) is false)
+                    return "Username is exist!";
+                if (!int.TryParse(data.Id, out int result))
+                    return "Id is invalid!";
+                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Convert.ToInt32(result));
                 if (user is null)
-                    throw new Exception("We could not find any user!");
+                    return "We could not find any user!";
 
                 user.Username = data.Username;
                 user.PasswordHash = _passwordManagement.HashPassword(data.Password);
@@ -55,7 +55,17 @@ namespace Application.CQRS.User
             {
                 throw new AppException("ادیت کاربر ناموفق بود" , "500");
             }
-
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+        private static bool CheckDouplicate(EditUserDto data)
+        {
+            var result = _dbContext.Users.Any(x => x.Username == data.Username);
+            if (result is true)
+                return false;
+            return true;
         }
     }
 }

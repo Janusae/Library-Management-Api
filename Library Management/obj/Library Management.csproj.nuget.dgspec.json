@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj": {}
+    "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj": {
+    "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Mohammad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj": {
+    "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Mohammad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -162,14 +162,14 @@
         }
       }
     },
-    "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mohammad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -191,8 +191,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj"
+              "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Domain\\Domain.csproj"
               }
             }
           }
@@ -246,14 +246,14 @@
         }
       }
     },
-    "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj": {
+    "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj",
         "projectName": "Library Management",
-        "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj",
+        "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Library Management\\Library Management.csproj",
         "packagesPath": "C:\\Users\\Mohammad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Library Management\\obj\\",
+        "outputPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Library Management\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -275,8 +275,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Mohammad\\Desktop\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj"
+              "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj"
               }
             }
           }

@@ -13,8 +13,9 @@ namespace Application.CQRS.User
     }
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, string>
     {
-        private readonly ProgramDbContext _dbContext;
+        private static ProgramDbContext _dbContext;
         private readonly IPasswordManagement _passwordManagement;
+        private static SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
         public CreateUserHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement)
         {
             _dbContext = programDbContext;
@@ -23,6 +24,7 @@ namespace Application.CQRS.User
 
         public async Task<string> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            await _semaphore.WaitAsync(cancellationToken);
             try
             {
                 var validator = new CreateUserDtoValidator();
@@ -31,6 +33,9 @@ namespace Application.CQRS.User
                     return $"{validationResult.Errors[0]}";
 
                 var data = request.createUser;
+                if (CheckDouplicate(data) is false)
+                    return "Email or Username is exist!";
+
                 var user = new Domain.Sql.Entity.User
                 {
                     CreatedAt = DateTime.Now,
@@ -38,7 +43,8 @@ namespace Application.CQRS.User
                     FirstName = data.Firstname,
                     LastName = data.Lastname,
                     Username = data.Username,
-                    PasswordHash = _passwordManagement.HashPassword(data.Password)
+                    PasswordHash = _passwordManagement.HashPassword(data.Password),
+                    IsDeleted = false
                 };
                 await _dbContext.Users.AddAsync(user , cancellationToken);
                 await _dbContext.SaveChangesAsync(cancellationToken);
@@ -52,7 +58,18 @@ namespace Application.CQRS.User
             {
                 throw new AppException("ایجاد کاربر ناموفق بود" , "500");
             }
+            finally
+            {
+                _semaphore.Release();
+            }
             
+        }
+        public static bool CheckDouplicate(CreateUserDto data)
+        {
+            var result = _dbContext.Users.Any(x => x.Email == data.Email || x.Username == data.Username);
+            if (result is true)
+                return false;
+            return true;
         }
     }
 }

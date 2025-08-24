@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Domain.Sql.Entity;
-using Domain.Sql.Entity.Book;
 
 namespace Infrastructure.Context
 {

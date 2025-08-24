@@ -1,10 +1,10 @@
-﻿using Application.DTO;
-using Infrastructure.Context;
+﻿using Infrastructure.Context;
 using MediatR;
 using Application.Services;
 using Microsoft.EntityFrameworkCore;
 using Application.Exceptions;
 using Application.Validations;
+using Application.DTO.User;
 namespace Application.CQRS.User
 {
     public class CreateUserCommand : IRequest<string>

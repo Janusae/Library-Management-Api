@@ -1,4 +1,4 @@
-﻿namespace Domain.Sql.Entity.Book
+﻿namespace Domain.Sql.Entity
 {
     public class Book 
     {

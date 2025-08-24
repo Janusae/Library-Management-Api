@@ -1,4 +1,4 @@
-﻿using Application.DTO;
+﻿using Application.DTO.User;
 using Application.Exceptions;
 using Application.Services;
 using Application.Validations;

@@ -1,8 +1,10 @@
-﻿using MediatR;
-using Application.DTO.BookDto;
-using Infrastructure.Context;
-using Microsoft.EntityFrameworkCore;
+﻿using Application.DTO.BookDto;
 using Application.Exceptions;
+using Application.Validations;
+using Application.Validations.Book;
+using Infrastructure.Context;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.CQRS.Book.Command
 {
@@ -13,6 +15,7 @@ namespace Application.CQRS.Book.Command
     public class CreateBookHandler : IRequestHandler<CreateBookCommand, string>
     {
         private readonly ProgramDbContext _programDb;
+        private static SemaphoreSlim Semaphore = new SemaphoreSlim(1 , 1);
         public CreateBookHandler(ProgramDbContext programDb)
         {
             _programDb = programDb;
@@ -21,12 +24,23 @@ namespace Application.CQRS.Book.Command
         {
             try
             {
+                await Semaphore.WaitAsync(cancellationToken);
+
                 var instance = request.CreateBookDto;
+                var validator = new CreateBookDtoValidator();
+                var validatorResult = validator.Validate(instance);
+                if (!validatorResult.IsValid)
+                    return $"{validatorResult.Errors[0]}";
+
+                var checkRepeatable = await _programDb.Book.AnyAsync(x => x.Name == instance.Name , cancellationToken);
+                if (checkRepeatable is true)
+                    return "The name of book is already exist!";
+
                 var book = new Domain.Sql.Entity.Book()
                 {
                     Description = instance.Description,
                     IsDeleted = false,
-                    IsExist = instance.IsExist,
+                    IsExist = instance.IsExist ?? true,
                     Name = instance.Name
                 };
                 await _programDb.Book.AddAsync(book, cancellationToken);
@@ -40,6 +54,10 @@ namespace Application.CQRS.Book.Command
             catch (Exception ex)
             {
                 throw new AppException("ایجاد کتاب ناموفق بود", "500");
+            }
+            finally
+            {
+                Semaphore.Release();
             }
 
         } 

@@ -1,9 +1,7 @@
 using Application.CQRS.User;
 using Application.Services;
 using Infrastructure.Context;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
-using FluentValidation;
 
 
 internal class Program

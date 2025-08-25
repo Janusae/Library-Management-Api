@@ -305,7 +305,8 @@
             "nullable": true
           },
           "isExist": {
-            "type": "boolean"
+            "type": "boolean",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -21,8 +21,13 @@ namespace Application.CQRS.Book.Command
         {
             try
             {
-                var id = Convert.ToInt32(request.Id);
-                var book = await _programDb.Book.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+                if (!int.TryParse(request.Id, out int data))
+                    return "Id is not valid!";
+
+                var book = await _programDb.Book.AsNoTracking().FirstOrDefaultAsync(x => x.Id == data , cancellationToken);
+                if(book is null)
+                    return "We could not any book with your id!";
+
                 _programDb.Book.Remove(book);
                 await _programDb.SaveChangesAsync(cancellationToken);
                 return "کتاب با موفقیت حذف شد";

@@ -9,6 +9,8 @@
       "LibraryManagement/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
+          "Domain": "1.0.0",
+          "Infrastructure": "1.0.0",
           "MediatR": "13.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.2",
           "Microsoft.EntityFrameworkCore.Design": "9.0.7",

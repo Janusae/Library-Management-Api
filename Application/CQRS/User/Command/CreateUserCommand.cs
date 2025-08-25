@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Application.Exceptions;
 using Application.Validations;
 using Application.DTO.User;
+using Application.Validations.User;
 namespace Application.CQRS.User
 {
     public class CreateUserCommand : IRequest<string>

@@ -2,6 +2,7 @@
 using Application.Exceptions;
 using Application.Services;
 using Application.Validations;
+using Application.Validations.User;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -36,8 +37,10 @@ namespace Application.CQRS.User
                 var data = request.editUser;
                 if (CheckDouplicate(data) is false)
                     return "Username is exist!";
+
                 if (!int.TryParse(data.Id, out int result))
                     return "Id is invalid!";
+
                 var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == Convert.ToInt32(result));
                 if (user is null)
                     return "We could not find any user!";

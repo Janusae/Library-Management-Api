@@ -14,5 +14,5 @@ It demonstrates modern backend practices such as **Dependency Injection (DI)**, 
 - **Entity Framework Core (EF Core)** – ORM for database access.
 - **Swagger / OpenAPI** – Interactive API documentation and testing.
 - **FluentValidation** – Strong input validation using `AbstractValidator` for DTOs.
-
+- **Generic Response Wrapper (`ServiceResponse<T>`)** – Standardized responses for API endpoints, including success, error, and not-found messages, with optional data payload.  
 ---

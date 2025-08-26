@@ -1,15 +1,17 @@
-﻿using Application.Exceptions;
+﻿using Application.Common;
+using Application.Exceptions;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.CQRS.User
 {
-    public class GetUserByIdCommand : IRequest<Domain.Sql.Entity.User>
+    public class GetUserByIdCommand : IRequest<ServiceResponse<Domain.Sql.Entity.User>>
     {
         public string Id { get; set; }
     }
-    public class GetUserByIdHandler : IRequestHandler<GetUserByIdCommand, Domain.Sql.Entity.User>
+
+    public class GetUserByIdHandler : IRequestHandler<GetUserByIdCommand, ServiceResponse<Domain.Sql.Entity.User>>
     {
         private readonly ProgramDbContext _dbcontext;
 
@@ -18,11 +20,11 @@ namespace Application.CQRS.User
             _dbcontext = dbcontext;
         }
 
-        public async Task<Domain.Sql.Entity.User> Handle(GetUserByIdCommand request, CancellationToken cancellationToken)
+        public async Task<ServiceResponse<Domain.Sql.Entity.User>> Handle(GetUserByIdCommand request, CancellationToken cancellationToken)
         {
             if (string.IsNullOrWhiteSpace(request.Id))
             {
-                throw new AppException("شناسه کاربر نمی‌تواند خالی باشد.", "400");
+                return ServiceResponse<Domain.Sql.Entity.User>.Error("شناسه کاربر نمی‌تواند خالی باشد.");
             }
 
             try
@@ -33,16 +35,15 @@ namespace Application.CQRS.User
 
                 if (user == null)
                 {
-                    throw new AppException($"کاربری با شناسه '{request.Id}' یافت نشد.", "404");
+                    return ServiceResponse<Domain.Sql.Entity.User>.NotFound($"کاربری با شناسه '{request.Id}' یافت نشد.");
                 }
 
-                return user;
+                return ServiceResponse<Domain.Sql.Entity.User>.Success("User fetched successfully", user);
             }
             catch (Exception ex)
             {
                 throw new AppException($"فراخوانی کاربر ناموفق بود: {ex.Message}", "500");
             }
-
         }
     }
 }

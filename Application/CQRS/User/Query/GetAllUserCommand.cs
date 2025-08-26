@@ -1,15 +1,16 @@
-﻿using Application.Exceptions;
+﻿using Application.Common;
+using Application.Exceptions;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.CQRS.User
 {
-    public class GetAllUserCommand : IRequest<List<Domain.Sql.Entity.User>>
+    public class GetAllUserCommand : IRequest<ServiceResponse<System.Collections.Generic.List<Domain.Sql.Entity.User>>>
     {
     }
 
-    public class GetAllUserHandler : IRequestHandler<GetAllUserCommand, List<Domain.Sql.Entity.User>>
+    public class GetAllUserHandler : IRequestHandler<GetAllUserCommand, ServiceResponse<System.Collections.Generic.List<Domain.Sql.Entity.User>>>
     {
         private readonly ProgramDbContext _dbcontext;
 
@@ -18,22 +19,21 @@ namespace Application.CQRS.User
             _dbcontext = dbcontext;
         }
 
-        public async Task<List<Domain.Sql.Entity.User>> Handle(GetAllUserCommand request, CancellationToken cancellationToken)
+        public async Task<ServiceResponse<System.Collections.Generic.List<Domain.Sql.Entity.User>>> Handle(GetAllUserCommand request, CancellationToken cancellationToken)
         {
             try
             {
                 var users = await _dbcontext.Users
-                .AsNoTracking()
-                .Where(x => x.IsDeleted != true)
-                .ToListAsync(cancellationToken);
+                    .AsNoTracking()
+                    .Where(x => x.IsDeleted != true)
+                    .ToListAsync(cancellationToken);
 
-                return users;
+                return ServiceResponse<System.Collections.Generic.List<Domain.Sql.Entity.User>>.Success("Users fetched successfully", users);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw new AppException("فراخوانی کاربران ناموفق بود" , "500");
+                throw new AppException("فراخوانی کاربران ناموفق بود", "500");
             }
-            
         }
     }
 }

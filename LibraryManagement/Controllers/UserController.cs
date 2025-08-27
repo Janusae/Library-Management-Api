@@ -1,5 +1,5 @@
 ﻿using Application.CQRS.User;
-using Application.Validations;
+using Application.DTO;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,14 +52,13 @@ namespace Library_Management.Controllers
             return Ok(result);
         }
         [HttpPut("Login")]
-        public async Task<IActionResult> Login(string Fullname, string nationalCode)
+        public async Task<IActionResult> Login(LoginDto data)
         {
             var request = await _mediator.Send(new Application.Services.LoginCommand
             {
-                Fullname = Fullname,
-                Nationalcode = nationalCode
+                LoginDto = data
             });
-            return Ok();
+            return Ok(request);
         }
         //[HttpGet("Logout")]
         //public async Task<IActionResult> Logout()

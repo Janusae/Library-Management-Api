@@ -124,18 +124,6 @@
         }
       }
     },
-    "/": {
-      "get": {
-        "tags": [
-          "LibraryManagement"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/User/GetAll": {
       "get": {
         "tags": [
@@ -267,22 +255,25 @@
         "tags": [
           "User"
         ],
-        "parameters": [
-          {
-            "name": "Fullname",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "nationalCode",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -331,6 +322,10 @@
             "type": "string",
             "nullable": true
           },
+          "nationalCode": {
+            "type": "string",
+            "nullable": true
+          },
           "email": {
             "type": "string",
             "nullable": true
@@ -372,6 +367,20 @@
             "type": "string",
             "nullable": true
           },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
           "username": {
             "type": "string",
             "nullable": true

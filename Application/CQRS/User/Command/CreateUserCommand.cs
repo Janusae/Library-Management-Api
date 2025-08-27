@@ -2,7 +2,6 @@
 using Application.DTO.User;
 using Application.Exceptions;
 using Application.Services;
-using Application.Validations;
 using Application.Validations.User;
 using Infrastructure.Context;
 using MediatR;
@@ -49,6 +48,7 @@ namespace Application.CQRS.User
                     Email = data.Email,
                     FirstName = data.Firstname,
                     LastName = data.Lastname,
+                    NationalCode = data.NationalCode,
                     Username = data.Username,
                     PasswordHash = _passwordManagement.HashPassword(data.Password),
                     IsDeleted = false

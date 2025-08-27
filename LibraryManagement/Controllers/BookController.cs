@@ -2,11 +2,12 @@
 using Application.CQRS.Book.Command;
 using Application.DTO.BookDto;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Library_Management.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookController : ControllerBase
@@ -17,7 +18,6 @@ namespace Library_Management.Controllers
             _mediator = mediator;
         }
 
-        // GET: api/Book
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetBooks()
         {
@@ -25,7 +25,6 @@ namespace Library_Management.Controllers
             return Ok(result);
         }
 
-        // GET: api/Book/{id}
         [HttpGet("GetById/{id}")]
         public async Task<IActionResult> GetBook(int id)
         {
@@ -33,7 +32,6 @@ namespace Library_Management.Controllers
             return Ok(result);
         }
 
-        // POST: api/Book
         [HttpPost("Create")]
         public async Task<IActionResult> CreateBook([FromBody] CreateBookDto request , CancellationToken cancellationToken)
         {
@@ -41,7 +39,6 @@ namespace Library_Management.Controllers
             return Ok(result);
         }
 
-        // PUT: api/Book/{id}
         [HttpPut("Update")]
         public async Task<IActionResult> UpdateBook([FromBody] UpdateBookDto request)
         {
@@ -49,7 +46,6 @@ namespace Library_Management.Controllers
             return Ok(result);
         }
 
-        // DELETE: api/Book/{id}
         [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> DeleteBook(string id)
         {

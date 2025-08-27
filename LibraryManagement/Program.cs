@@ -1,4 +1,3 @@
-using Application.Common;
 using Application.CQRS.User;
 using Application.Services;
 using Infrastructure.Context;
@@ -39,7 +38,8 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllers();
-        app.MapGet("/", () => Results.Redirect("/swagger"));
+        app.MapGet("/", () => Results.Redirect("/swagger/index.html"))
+            .ExcludeFromDescription();
         app.Run();
     }
 }

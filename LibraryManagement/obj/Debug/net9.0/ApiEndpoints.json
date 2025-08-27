@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_2",
-    "RelativePath": "",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "Library_Management.Controllers.BookController",
     "Method": "CreateBook",
     "RelativePath": "api/Book/Create",
@@ -172,14 +156,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Fullname",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "nationalCode",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "data",
+        "Type": "Application.DTO.LoginDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

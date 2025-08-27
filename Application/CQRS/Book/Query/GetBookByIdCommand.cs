@@ -27,7 +27,7 @@ namespace Application.CQRS.Book
             {
                 var book = await _programDb.Book
                     .AsNoTracking()
-                    .FirstOrDefaultAsync(x => x.Id == request.Id && !x.IsDeleted, cancellationToken);
+                    .FirstOrDefaultAsync(x => x.Id == request.Id && x.IsDeleted == false, cancellationToken);
 
                 if (book == null)
                     return ServiceResponse<Domain.Sql.Entity.Book>.NotFound($"کتابی با شناسه {request.Id} یافت نشد");

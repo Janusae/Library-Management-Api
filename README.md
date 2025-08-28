@@ -15,5 +15,6 @@ It demonstrates modern backend practices such as **Dependency Injection (DI)**, 
 - **Swagger / OpenAPI** – Interactive API documentation and testing.
 - **FluentValidation** – Strong input validation using `AbstractValidator` for DTOs.
 - **JWT Authentication** – Secure authentication using JSON Web Tokens for user login and authorization.  
-- **Generic Response Wrapper (`ServiceResponse<T>`)** – Standardized responses for API endpoints, including success, error, and not-found messages, with optional data payload.  
+- **Generic Response Wrapper (`ServiceResponse<T>`)** – Standardized responses for API endpoints, including success, error, and not-found messages, with optional data payload.
+- **Serilog Logging** – Centralized logging using Serilog through a LoggerService and a ResponseHandler that automatically logs all responses and errors, ensuring consistent logging across all Handlers and Commands/Queries.
 ---

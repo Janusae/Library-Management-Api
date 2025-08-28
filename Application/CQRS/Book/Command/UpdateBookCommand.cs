@@ -17,11 +17,13 @@ namespace Application.CQRS.Book.Command
     public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommand, ServiceResponse<object>>
     {
         private readonly ProgramDbContext _programDb;
+        private readonly ResponseHandler _response;
         private static SemaphoreSlim semaphor = new SemaphoreSlim(1, 1);
 
-        public UpdateBookCommandHandler(ProgramDbContext programDb)
+        public UpdateBookCommandHandler(ProgramDbContext programDb, ResponseHandler response)
         {
             _programDb = programDb;
+            _response = response;
         }
 
         public async Task<ServiceResponse<object>> Handle(UpdateBookCommand request, CancellationToken cancellationToken)
@@ -34,17 +36,17 @@ namespace Application.CQRS.Book.Command
                 var validatorResult = validator.Validate(instance);
 
                 if (!validatorResult.IsValid)
-                    return ServiceResponse<object>.Error($"{validatorResult.Errors[0]}");
+                    return _response.CreateError<object>($"{validatorResult.Errors[0]}");
 
                 var id = Convert.ToInt32(instance.Id);
                 var book = await _programDb.Book.FirstOrDefaultAsync(x => x.Id == id);
 
                 if (book is null)
-                    return ServiceResponse<object>.NotFound("We could not find any book with your id!");
+                    return _response.CreateNotFound<object>("We could not find any book with your id!");
 
                 var checkRepeatalbe = await _programDb.Book.AnyAsync(x => x.Name == instance.Name);
                 if (checkRepeatalbe)
-                    return ServiceResponse<object>.Error("The name of book is already exist!");
+                    return _response.CreateError<object>("The name of book is already exist!");
 
                 book.IsExist = instance.IsExist;
                 book.Name = instance.Name;
@@ -52,14 +54,16 @@ namespace Application.CQRS.Book.Command
 
                 await _programDb.SaveChangesAsync(cancellationToken);
 
-                return ServiceResponse<object>.Success("کتاب با موفقیت آپدیت شد", null);
+                return _response.CreateSuccess<object>("کتاب با موفقیت آپدیت شد", null);
             }
             catch (DbUpdateException ex)
             {
+                _response.CreateError<object>("خطای دیتابیس در آپدیت کتاب", ex);
                 throw new AppException("خطای دیتابیس در آپدیت کتاب", "500");
             }
             catch (Exception ex)
             {
+                _response.CreateError<object>("آپدیت کتاب ناموفق بود", ex);
                 throw new AppException("آپدیت کتاب ناموفق بود", "500");
             }
             finally

@@ -2,9 +2,6 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Application.Common;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.CQRS.Book
 {
@@ -15,10 +12,12 @@ namespace Application.CQRS.Book
     public class GetBooksHandler : IRequestHandler<GetBooksCommand, ServiceResponse<List<Domain.Sql.Entity.Book>>>
     {
         private readonly ProgramDbContext _programDb;
+        private readonly ResponseHandler _response;
 
-        public GetBooksHandler(ProgramDbContext programDb)
+        public GetBooksHandler(ProgramDbContext programDb, ResponseHandler response)
         {
             _programDb = programDb;
+            _response = response;
         }
 
         public async Task<ServiceResponse<List<Domain.Sql.Entity.Book>>> Handle(GetBooksCommand request, CancellationToken cancellationToken)
@@ -30,11 +29,12 @@ namespace Application.CQRS.Book
                     .Where(x => x.IsDeleted == false)
                     .ToListAsync(cancellationToken);
 
-                return ServiceResponse<List<Domain.Sql.Entity.Book>>.Success("Books fetched successfully", books);
+                return _response.CreateSuccess("Books fetched successfully", books);
             }
             catch (Exception ex)
             {
-                throw new Application.Exceptions.AppException($"فراخوانی کتاب‌ها ناموفق بود: {ex.Message}", "500");
+                _response.CreateError<List<Domain.Sql.Entity.Book>>("فراخوانی کتاب‌ها ناموفق بود", ex);
+                throw new Application.Exceptions.AppException("فراخوانی کتاب‌ها ناموفق بود", "500");
             }
         }
     }

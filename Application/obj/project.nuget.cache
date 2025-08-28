@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ws+jZNUN/vs=",
+  "dgSpecHash": "VyFyex+WH5E=",
   "success": true,
   "projectFilePath": "C:\\Users\\Mohammad\\Desktop\\Main Project\\New folder (2)\\Library-Management-Api\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\Mohammad\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.13.0\\microsoft.identitymodel.tokens.8.13.0.nupkg.sha512",
     "C:\\Users\\Mohammad\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Mohammad\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Mohammad\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
     "C:\\Users\\Mohammad\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Mohammad\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\Mohammad\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

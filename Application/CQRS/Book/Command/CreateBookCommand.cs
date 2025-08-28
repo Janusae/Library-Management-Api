@@ -5,7 +5,6 @@ using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Application.Common;
-using System.Threading;
 
 namespace Application.CQRS.Book.Command
 {
@@ -17,11 +16,13 @@ namespace Application.CQRS.Book.Command
     public class CreateBookHandler : IRequestHandler<CreateBookCommand, ServiceResponse<object>>
     {
         private readonly ProgramDbContext _programDb;
+        private readonly ResponseHandler _response;
         private static SemaphoreSlim Semaphore = new SemaphoreSlim(1, 1);
 
-        public CreateBookHandler(ProgramDbContext programDb)
+        public CreateBookHandler(ProgramDbContext programDb, ResponseHandler response)
         {
             _programDb = programDb;
+            _response = response;
         }
 
         public async Task<ServiceResponse<object>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
@@ -34,11 +35,11 @@ namespace Application.CQRS.Book.Command
                 var validatorResult = validator.Validate(instance);
 
                 if (!validatorResult.IsValid)
-                    return ServiceResponse<object>.Error($"{validatorResult.Errors[0]}");
+                    return _response.CreateError<object>($"{validatorResult.Errors[0]}");
 
                 var checkRepeatable = await _programDb.Book.AnyAsync(x => x.Name == instance.Name, cancellationToken);
                 if (checkRepeatable)
-                    return ServiceResponse<object>.Error("The name of book is already exist!");
+                    return _response.CreateError<object>("The name of book is already exist!");
 
                 var book = new Domain.Sql.Entity.Book
                 {
@@ -51,14 +52,16 @@ namespace Application.CQRS.Book.Command
                 await _programDb.Book.AddAsync(book, cancellationToken);
                 await _programDb.SaveChangesAsync(cancellationToken);
 
-                return ServiceResponse<object>.Success("کتاب با موفقیت ایجاد شد", null);
+                return _response.CreateSuccess<object>("کتاب با موفقیت ایجاد شد", null);
             }
             catch (DbUpdateException ex)
             {
+                _response.CreateError<object>("خطای دیتابیس در ذخیره کتاب", ex);
                 throw new AppException("خطای دیتابیس در ذخیره کتاب", "500");
             }
             catch (Exception ex)
             {
+                _response.CreateError<object>("ایجاد کتاب ناموفق بود", ex);
                 throw new AppException("ایجاد کتاب ناموفق بود", "500");
             }
             finally

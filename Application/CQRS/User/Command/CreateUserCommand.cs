@@ -18,12 +18,14 @@ namespace Application.CQRS.User
     {
         private static ProgramDbContext _dbContext;
         private readonly IPasswordManagement _passwordManagement;
+        private readonly ResponseHandler _response;
         private static SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
-        public CreateUserHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement)
+        public CreateUserHandler(ProgramDbContext programDbContext, IPasswordManagement passwordManagement, ResponseHandler response)
         {
             _dbContext = programDbContext;
             _passwordManagement = passwordManagement;
+            _response = response;
         }
 
         public async Task<ServiceResponse<object>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -35,12 +37,12 @@ namespace Application.CQRS.User
                 var validationResult = validator.Validate(request.createUser);
 
                 if (!validationResult.IsValid)
-                    return ServiceResponse<object>.Error($"{validationResult.Errors[0]}");
+                    return _response.CreateError<object>($"{validationResult.Errors[0]}");
 
                 var data = request.createUser;
 
                 if (!CheckDouplicate(data))
-                    return ServiceResponse<object>.NotFound("Email or Username is exist");
+                    return _response.CreateNotFound<object>("Email or Username is exist");
 
                 var user = new Domain.Sql.Entity.User
                 {
@@ -57,14 +59,16 @@ namespace Application.CQRS.User
                 await _dbContext.Users.AddAsync(user, cancellationToken);
                 await _dbContext.SaveChangesAsync(cancellationToken);
 
-                return ServiceResponse<object>.Success("Creating user is successfull", null);
+                return _response.CreateSuccess<object>("Creating user is successfull", null);
             }
             catch (DbUpdateException ex)
             {
+                _response.CreateError<object>("خطای دیتابیس در ذخیره کاربر", ex);
                 throw new AppException("خطای دیتابیس در ذخیره کاربر", "500");
             }
             catch (Exception ex)
             {
+                _response.CreateError<object>("ایجاد کاربر ناموفق بود", ex);
                 throw new AppException("ایجاد کاربر ناموفق بود", "500");
             }
             finally

@@ -14,17 +14,19 @@ namespace Application.CQRS.User
     public class GetUserByIdHandler : IRequestHandler<GetUserByIdCommand, ServiceResponse<Domain.Sql.Entity.User>>
     {
         private readonly ProgramDbContext _dbcontext;
+        private readonly ResponseHandler _response;
 
-        public GetUserByIdHandler(ProgramDbContext dbcontext)
+        public GetUserByIdHandler(ProgramDbContext dbcontext, ResponseHandler response)
         {
             _dbcontext = dbcontext;
+            _response = response;
         }
 
         public async Task<ServiceResponse<Domain.Sql.Entity.User>> Handle(GetUserByIdCommand request, CancellationToken cancellationToken)
         {
             if (string.IsNullOrWhiteSpace(request.Id))
             {
-                return ServiceResponse<Domain.Sql.Entity.User>.Error("شناسه کاربر نمی‌تواند خالی باشد.");
+                return _response.CreateError<Domain.Sql.Entity.User>("شناسه کاربر نمی‌تواند خالی باشد.");
             }
 
             try
@@ -35,14 +37,15 @@ namespace Application.CQRS.User
 
                 if (user == null)
                 {
-                    return ServiceResponse<Domain.Sql.Entity.User>.NotFound($"کاربری با شناسه '{request.Id}' یافت نشد.");
+                    return _response.CreateNotFound<Domain.Sql.Entity.User>($"کاربری با شناسه '{request.Id}' یافت نشد.");
                 }
 
-                return ServiceResponse<Domain.Sql.Entity.User>.Success("User fetched successfully", user);
+                return _response.CreateSuccess("User fetched successfully", user);
             }
             catch (Exception ex)
             {
-                throw new AppException($"فراخوانی کاربر ناموفق بود: {ex.Message}", "500");
+                _response.CreateError<Domain.Sql.Entity.User>("فراخوانی کاربر ناموفق بود", ex);
+                throw new AppException("فراخوانی کاربر ناموفق بود", "500");
             }
         }
     }

@@ -364,3 +364,5 @@ C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\Lib
 C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\LibraryManagement\obj\Debug\net9.0\LibraryManagement.pdb
 C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\LibraryManagement\obj\Debug\net9.0\LibraryManagement.genruntimeconfig.cache
 C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\LibraryManagement\obj\Debug\net9.0\ref\LibraryManagement.dll
+C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\LibraryManagement\bin\Debug\net9.0\Serilog.dll
+C:\Users\Mohammad\Desktop\Main Project\New folder (2)\Library-Management-Api\LibraryManagement\bin\Debug\net9.0\Serilog.Sinks.File.dll

@@ -1,7 +1,10 @@
+using Application.Common;
 using Application.CQRS.User;
 using Application.Services;
 using Infrastructure.Context;
+using Infrastructure.Logging;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 
 internal class Program
@@ -14,6 +17,7 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddOpenApi();
         builder.Services.AddScoped<IPasswordManagement, Password_Management>();
+        builder.Services.AddScoped<ILoggerService, LoggerService>();
         builder.Services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly);
@@ -22,6 +26,11 @@ internal class Program
         {
             options.UseSqlServer("server=.;database=LibraryManagement;TrustServerCertificate=true;Trusted_Connection=true");
         });
+        builder.Services.AddScoped<ResponseHandler>();
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.File("Logs/Logger.txt" , rollingInterval:RollingInterval.Day)
+            .CreateLogger();
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())

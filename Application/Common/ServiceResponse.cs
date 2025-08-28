@@ -1,4 +1,6 @@
-﻿namespace Application.Common
+﻿using Infrastructure.Logging;
+
+namespace Application.Common
 {
     public enum StatusResponse
     {

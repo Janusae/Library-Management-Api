@@ -14,10 +14,12 @@ namespace Application.CQRS.User
     public class DeleteUserHandler : IRequestHandler<DeleteUserCommand, ServiceResponse<object>>
     {
         private readonly ProgramDbContext _dbcontext;
+        private readonly ResponseHandler _response;
 
-        public DeleteUserHandler(ProgramDbContext dbcontext)
+        public DeleteUserHandler(ProgramDbContext dbcontext, ResponseHandler response)
         {
             _dbcontext = dbcontext;
+            _response = response;
         }
 
         public async Task<ServiceResponse<object>> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
@@ -26,7 +28,7 @@ namespace Application.CQRS.User
             {
                 if (string.IsNullOrWhiteSpace(request.Id))
                 {
-                    return ServiceResponse<object>.Error("Your id is invalid!");
+                    return _response.CreateError<object>("Your id is invalid!");
                 }
 
                 var user = await _dbcontext.Users
@@ -35,20 +37,22 @@ namespace Application.CQRS.User
 
                 if (user is null)
                 {
-                    return ServiceResponse<object>.NotFound("We could not find any user!");
+                    return _response.CreateNotFound<object>("We could not find any user!");
                 }
 
                 _dbcontext.Users.Remove(user);
                 await _dbcontext.SaveChangesAsync(cancellationToken);
 
-                return ServiceResponse<object>.Success("Removing user is successfull!", null);
+                return _response.CreateSuccess<object>("Removing user is successfull!", null);
             }
             catch (DbUpdateException ex)
             {
+                _response.CreateError<object>("خطای دیتابیس در حذف کاربر", ex);
                 throw new AppException("خطای دیتابیس در حذف کاربر");
             }
             catch (Exception ex)
             {
+                _response.CreateError<object>("حذف کاربر ناموفق بود", ex);
                 throw new AppException("حذف کاربر ناموفق بود");
             }
         }

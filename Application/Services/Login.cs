@@ -37,7 +37,7 @@ namespace Application.Services
                         new Claim(ClaimTypes.Name , instance.Username),
                         new Claim(ClaimTypes.NameIdentifier, user.NationalCode)
                     };
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ThisIsASecretKeyThatIsLongEnoughToBeSecure123!!"));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("c5f0e609953d1e8721005d3b275e85c6cc387f8f74883ec152cd06c5cc3e8029"));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
                 var token = new JwtSecurityToken(
                     issuer: "Hospital",

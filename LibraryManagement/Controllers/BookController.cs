@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Library_Management.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookController : ControllerBase
@@ -17,7 +17,7 @@ namespace Library_Management.Controllers
         {
             _mediator = mediator;
         }
-
+        [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetBooks()
         {
